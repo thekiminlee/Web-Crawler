@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Koogle</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <!-- <link ref="stylesheet" type="text/css" href="templates/css/index.css" /> -->
+    <style>
+      body {
+        margin: 0;
+        font-family: "Roboto", sans-serif;
+      }
+
+      .container {
+        width: 90%;
+        height: 90%;
+
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        margin: auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .form {
+        text-align: center;
+      }
+
+      #form-search {
+        width: 450px;
+        line-height: 32px;
+        padding: 20px 10px;
+        border-radius: 20px;
+        border: solid;
+        border-width: 0.5px;
+        border-color: grey;
+      }
+
+      #form-search:focus {
+        outline: none;
+      }
+
+      .form #form-search {
+        padding: 0 8px;
+      }
+
+      .buttons {
+        text-align: center;
+        padding-top: 30px;
+      }
+
+      #submit {
+        color: grey;
+        border: solid;
+        border-width: 1px;
+        border-radius: 10px;
+        width: 90px;
+        height: 23px;
+      }
+
+      #submit:focus {
+        outline: none;
+      }
+
+      #logo {
+        width: 500px;
+        height: 200px;
+        object-fit: contain;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <a href="#"><img id="logo" src="/static/koogle.jpg"/></a>
+      <div class="form">
+        <form action="http://localhost:5000/search" method="POST">
+          <label for="form-search"></label>
+          <input
+            type="text"
+            id="form-search"
+            name="query"
+            placeholder="Search Koogle"
+          />
+        </form>
+      </div>
+
+      <div class="buttons">
+        <input id="submit" type="submit" value="Search" />
+      </div>
+    </div>
+  </body>
+</html>

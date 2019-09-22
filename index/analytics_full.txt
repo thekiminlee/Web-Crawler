@@ -1,0 +1,3 @@
+Number of unique terms: 602865
+Execution time: 529.2417659759521 seconds
+Total number of documents: 37497
